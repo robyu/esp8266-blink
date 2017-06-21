@@ -5,10 +5,10 @@
  * then off for one second, repeatedly.
  */
 #include "Arduino.h"
-#include <stdio.h>
+#include <ESP8266WiFi.h>
 
 #ifndef LED_BUILTIN
-#define LED_BUILTIN 13
+#define LED_BUILTIN 16
 #endif
 
 void setup()
@@ -16,6 +16,8 @@ void setup()
   // initialize LED digital pin as an output.
   Serial.begin(115200);
   pinMode(LED_BUILTIN, OUTPUT);
+  WiFi.begin("obedientbuttersquid","P00pietou");
+  
 }
 
 void loop()
